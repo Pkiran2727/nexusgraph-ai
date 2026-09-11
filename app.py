@@ -11,6 +11,16 @@ if str(backend_dir) not in sys.path:
 
 from main import app as fastapi_app
 
+# ZeroGPU Compatibility Check
+try:
+    import spaces
+    @spaces.GPU(duration=1)
+    def zero_gpu_init():
+        return True
+except Exception:
+    pass
+
+
 # Read frontend files
 frontend_dir = root_dir / "frontend"
 index_html_path = frontend_dir / "index.html"
