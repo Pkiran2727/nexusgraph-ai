@@ -1,0 +1,553 @@
+MODUS ENTERPRISE AI BUILD
+CHALLENGE
+From Business Problem to Working Enterprise AI
+Application
+Purpose
+This is a practical 2-day AI engineering, research and enterprise intelligence challenge.
+You will not be provided with a predefined case study, dataset, architecture, process
+model, database design or solution blueprint.
+You are expected to independently:
+Select & Define a Case → Research → Create Data → Design Architecture → Build
+Backend → Build AI Intelligence → Build UI → Test → Demonstrate
+The objective is to assess whether you can build an actual AI application from scratch—not
+simply generate an analysis using ChatGPT or another AI interface.
+
+Mandatory Technical Rules
+Every submission must be a working application with a demonstrable architecture.
+•
+•
+
+•
+•
+•
+
+•
+
+You must build the solution from scratch during the challenge and clearly identify any
+pre-existing libraries/frameworks used.
+All AI models, frameworks, databases, APIs and development components used for
+the assignment must be free, open-source, free-tier, or locally runnable for
+evaluation. No paid licence should be required to demonstrate the solution.
+The application must contain a real frontend, backend, data/storage layer and
+AI/model integration appropriate to the use case.
+Data must persist. Refreshing or restarting the application must not simply destroy all
+intelligence.
+AI-generated static HTML, a PowerPoint, spreadsheet analysis, Notebook-only
+demonstration or a prompt run manually through ChatGPT/Claude/Gemini is not
+considered a completed AI application.
+Candidates may use AI coding assistants, but must understand and explain every
+major component they submit.
+
+•
+•
+•
+
+The application should process multiple records/cases systematically—not contain
+hard-coded outputs designed only for the demo.
+Outputs must be traceable to underlying data, research or reasoning wherever
+applicable.
+Source code and setup instructions must be submitted so the application can be
+independently reviewed.
+
+Assignment 1 — AI Transformation
+Strategy Intelligence
+Your Challenge
+Choose a real or fictional industry and independently create an organisation facing a
+significant transformation challenge.
+Examples could include retail, banking, manufacturing, healthcare, logistics, telecom,
+hospitality or another industry of your choice.
+Do not simply ask an LLM:
+“Create a transformation strategy.”
+Build an AI application that researches, analyses and develops transformation
+intelligence.
+Your application should be capable of understanding:
+Business Situation → External Change → Strategic Issues → Transformation
+Opportunities → Priorities → Initiatives → Outcomes
+
+Minimum Application Capability
+A user should be able to enter or upload information about an organisation.
+The backend should:
+Research relevant external information where appropriate.
+Store the organisation and research information.
+Analyse strategic issues.
+Identify evidence supporting findings.
+Generate transformation opportunities.
+Prioritise recommendations.
+Allow users to interrogate the findings.
+
+Demonstration Question
+Your AI should be able to answer:
+“What should this organisation transform, why, what evidence supports it, and what should
+be done first?”
+The answer must be generated from the application's underlying intelligence—not a hardcoded response.
+
+Assignment 2 — 100-Process AI Research
+& Intelligence Engine
+Your Challenge
+Choose an industry and organisation yourself.
+Research and identify approximately 100 meaningful business processes across that
+enterprise.
+Build an AI application capable of analysing those processes one by one at scale.
+The objective is not to manually create a spreadsheet.
+The application must systematically process the process library.
+For every process, your system should research and determine information such as:
+Intelligence Area
+Example
+Process
+Demand Forecasting
+Business purpose
+Why it exists
+Key activities
+What happens
+Current challenges Typical problems
+AI opportunity
+How AI may change it
+Automation potential Low / Medium / High
+Human involvement Future human responsibility
+Technologies
+Relevant AI capabilities
+Business benefit
+Cost / revenue / CX / speed
+Risks
+AI / operational / regulatory
+Evidence
+Research supporting findings
+
+Key Test
+If the evaluator adds Process 101, your application should be able to analyse it using the
+same mechanism.
+If the system only contains 100 manually generated rows, the challenge has not been
+completed.
+
+Expected Demonstration
+
+“Analyse all processes.”
+“Show the 10 processes with highest AI potential.”
+“Which processes should remain predominantly human-led?”
+“Show me the research supporting Process 37.”
+
+Assignment 3 — AI Future Process
+Designer
+Your Challenge
+Choose an industry and identify a set of important business processes.
+Build an application that researches how AI, automation and emerging technology could
+change those processes.
+The system should reason:
+Current Process
+↓
+Activities
+↓
+Problems
+↓
+AI Opportunities
+↓
+Future Process
+↓
+Human vs AI Responsibility
+↓
+Expected Benefit
+The application should visually or structurally compare:
+CURRENT → TRANSITION → FUTURE
+
+Critical Requirement
+
+The future process cannot simply be generated as paragraphs.
+Your backend must store structured components such as activities, decisions, roles, systems,
+AI interventions and relationships so they can be queried and compared.
+
+Assignment 4 — Process-to-Role
+Intelligence AI
+Your Challenge
+Select an industry and independently research its processes and representative organisational
+roles.
+Build an AI application that discovers relationships between:
+Process ↔ Activity ↔ Role
+The system should determine:
+Who performs which activities?
+Which roles participate in multiple processes?
+Which activities are likely to change because of AI?
+How will those changes affect individual roles?
+
+Example Query
+“Show me how AI could affect a Procurement Manager.”
+The application should not give a generic LLM answer.
+It should derive the answer from:
+Processes involving Procurement Manager
+↓
+Activities performed
+↓
+AI impact on each activity
+↓
+Future responsibilities
+
+↓
+Resulting role change
+This tests whether the candidate can build connected enterprise intelligence.
+
+Assignment 5 — AI Future Skills
+Intelligence Engine
+Your Challenge
+Build an AI application that determines how AI and transformation will change workforce
+skills.
+You must independently select:
+•
+•
+•
+•
+•
+
+An industry.
+Representative processes.
+Roles.
+Activities.
+Skills.
+
+Your application should create intelligence connecting:
+Process → Activity → Role → Current Skill → AI Impact → Future Skill
+The AI should classify skills, for example:
+Emerging
+Increasing
+AI-Augmented
+Changing
+Declining
+Enduring Human Capability
+
+Demonstration
+An executive should be able to ask:
+“What are the top future skills our organisation will need?”
+“Which skills are declining because of automation?”
+“Which roles require the greatest reskilling?”
+
+“Why does the system believe this?”
+The answer should be calculated from underlying role/process/skill intelligence.
+
+Assignment 6 — Role-Level AI Intelligence
+Your Challenge
+Choose approximately 20–50 representative roles within an industry.
+Build an AI application capable of analysing the future of each role.
+For every role, determine:
+Role
+↓
+Processes
+↓
+Activities
+↓
+Current Skills
+↓
+AI Exposure
+↓
+Activities Automated
+↓
+Activities Augmented
+↓
+New Responsibilities
+↓
+Future Skills
+
+↓
+Future Role Profile
+The application should support comparisons.
+For example:
+“Compare the future AI impact on a Finance Analyst versus Procurement Analyst.”
+Or:
+“Which five roles are likely to experience the greatest change?”
+The candidate must explain how the system derived its conclusions.
+
+Assignment 7 — AI Governance Research
+& Assessment Application
+Your Challenge
+Independently research current AI governance and responsible-AI requirements.
+Select an industry and create realistic AI use cases yourself.
+Build an AI Governance application that assesses each AI use case for areas such as:
+Data
+Privacy
+Bias/Fairness
+Human Oversight
+Explainability
+Security
+Decision Impact
+Regulatory Exposure
+Model Risk
+Monitoring
+The application should research reliable public sources and retain citations/source metadata.
+
+Important Requirement
+The system should distinguish between:
+Law / Regulation
+Regulatory Guidance
+Industry Standard
+
+Research
+Vendor Information
+General Web Content
+Do not simply ask an LLM whether an AI use case is “high risk.”
+The application must demonstrate a repeatable assessment mechanism.
+
+Live Test
+The evaluator may enter a completely new AI use case.
+The application should assess it dynamically.
+
+Assignment 8 — Value Chain AI
+Opportunity Intelligence
+Your Challenge
+Select any industry.
+Independently research and construct its end-to-end value chain.
+Build an application that analyses every major value-chain stage and identifies:
+Value Chain Stage
+↓
+Processes
+↓
+Business Problems
+↓
+AI Opportunities
+↓
+Relevant AI Capabilities
+↓
+Potential Benefits
+↓
+Risks
+↓
+Priority
+The application should answer:
+
+“Where across this industry's value chain can AI create the greatest value?”
+And:
+“Show the evidence behind those recommendations.”
+
+Advanced Capability
+Allow the user to change the industry and demonstrate that the system can begin constructing
+a different analysis rather than relying entirely on hard-coded data.
+
+Assignment 9 — Enterprise AI Research
+Agent
+Your Challenge
+Build an AI application capable of conducting structured enterprise research at scale.
+Choose a research topic such as:
+“How is AI transforming retail operations?”
+or:
+“What AI technologies are changing manufacturing?”
+The system should:
+Define Research Questions
+→ Search Sources
+→ Collect Information
+→ Store Sources
+→ Extract Findings
+→ Compare Evidence
+→ Classify Findings
+→ Detect Contradictions
+→ Generate Conclusions
+→ Maintain Traceability
+The challenge is not to build “ChatGPT with web search.”
+The backend must maintain a reusable research knowledge base.
+
+Evaluator Test
+
+We should be able to give the application a new research question and observe the research
+pipeline operating.
+
+Assignment 10 — Transformation
+Dependency Intelligence
+Your Challenge
+Create a fictional transformation programme yourself containing multiple initiatives.
+For example:
+•
+•
+•
+•
+•
+•
+
+AI customer service.
+ERP replacement.
+New digital channel.
+Supply-chain automation.
+Data platform.
+Workforce transformation.
+
+Build an AI application that identifies relationships and dependencies.
+For example:
+AI Customer Service
+depends on
+Customer Data
+depends on
+Data Platform
+depends on
+Integration Programme
+The system should identify:
+Dependencies
+Conflicts
+Sequencing
+Risks
+
+Resource collisions
+Potential transformation bottlenecks
+
+Live Test
+The evaluator adds a new initiative.
+The AI must dynamically determine how it affects the existing transformation landscape.
+
+Assignment 11 — Process × Role × Skill
+Intelligence Graph
+Your Challenge
+Build a connected intelligence application.
+Independently create/research:
+Industry
+↓
+Value Chain
+↓
+Processes
+↓
+Activities
+↓
+Roles
+↓
+Skills
+Then overlay:
+AI Opportunities
+and
+Future Change
+The evaluator should be able to navigate relationships.
+For example:
+
+“Select a process.”
+See affected roles.
+“Select a role.”
+See processes and skills.
+“Select a skill.”
+See every role requiring that skill.
+Then ask:
+“If AI automates this activity, show the cascading impact.”
+This challenge strongly tests backend modelling, graph thinking and enterprise
+reasoning.
+
+Assignment 12 — Enterprise
+Transformation Intelligence App
+Advanced / Grand Challenge
+Choose an organisation and industry yourself.
+Build a working AI application capable of connecting at least four of the following:
+Strategy
+Value Chain
+Processes
+Roles
+Skills
+AI Opportunities
+Governance
+Transformation Initiatives
+The application should demonstrate how changes propagate.
+For example:
+“Our strategy is to become AI-first within three years.”
+The application should reason:
+Strategy
+→ Value-chain opportunities
+→ Processes affected
+→ AI use cases
+→ Roles affected
+
+→ Skills required
+→ Governance implications
+→ Transformation priorities.
+An executive should then be able to ask:
+“What should we transform first?”
+“Which processes have the greatest AI opportunity?”
+“Which roles will change most?”
+“What skills should we invest in?”
+“What are our highest AI governance risks?”
+“What dependencies could prevent successful transformation?”
+The application must explain why it reached each conclusion.
+
+Mandatory Application Architecture
+We should make this a formal gate in the assessment.
+Every candidate must demonstrate:
+USER INTERFACE
+Web application/dashboard/chat/visualisation
+↕
+APPLICATION/API LAYER
+Backend services and APIs
+↕
+AI INTELLIGENCE LAYER
+LLM/reasoning/retrieval/agents/classification as appropriate
+↕
+DATA & KNOWLEDGE LAYER
+Database/vector store/graph/document store as appropriate
+↕
+EXTERNAL RESEARCH / DATA
+Public information and permitted APIs where required.
+Candidates choose their own architecture.
+We should not tell them which architecture Modus uses.
+
+Free Technology Requirement
+The solution must be reproducible without purchasing software licences.
+
+Candidates may choose suitable:
+•
+•
+•
+•
+•
+•
+•
+
+Open-source/local LLMs.
+Free-tier model APIs where genuinely available.
+Open-source embedding models.
+Open-source vector databases.
+Relational/document/graph databases available free or open source.
+Open-source frontend/backend frameworks.
+Public/free APIs and datasets.
+
+If a free-tier external service is used, the candidate must explain:
+What happens if that service becomes paid or unavailable?
+Preference should be given to solutions that can be reproduced locally or migrated easily.
+
+What Is NOT Accepted
+This section is particularly important.
+A submission will not qualify as a completed application if it is primarily:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+A PowerPoint presentation.
+An Excel spreadsheet manually populated using ChatGPT.
+A static HTML page containing AI-generated results.
+A Notebook with manually executed prompts.
+A chatbot connected to an LLM with no meaningful backend intelligence.
+Hard-coded responses.
+A wrapper around ChatGPT or another hosted AI interface.
+A solution where all “intelligence” is contained in one giant prompt.
+Screenshots or mock-ups instead of working functionality.
+An application that cannot accept a new record/process/role/use case and analyse it
+dynamically.
+
+The “Surprise Record” Test
+I would make this mandatory for every assignment.
+Candidates build their application without knowing the final test input.
+
+During the presentation, the judging panel provides a new process, role, strategy, AI use
+case, skill, company scenario or research question.
+The candidate must enter it live.
+We then observe:
+Input → Backend Processing → Research/Retrieval → AI Analysis → Storage →
+Relationships → Output
+This immediately exposes whether someone has built an actual application or simply
+prepared attractive AI-generated demo content.
+
+Final Deliverables
+Each candidate/team must submit source code repository, README/setup instructions,
+architecture diagram, database/data model, model and library inventory with licences,
+sample/synthetic data, research sources, working application and a 10–15 minute live
+demonstration.
+They should also disclose where AI coding tools were used and clearly explain what they
+personally designed and implemented.
+The most important judging question should be:
+“If we give your application 1,000 processes tomorrow instead of 100, what happens?”
+That single question will tell us a great deal about whether the candidate understands
+enterprise-scale AI engineering versus simply producing an AI demo.
+
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusGraph AI — Enterprise Process x Role x Skill Intelligence Engine</title>
+    <!-- Google Fonts & Cytoscape CDN -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.26.0/cytoscape.min.js"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-area">
+            <h1>NexusGraph AI</h1>
+            <p>Enterprise Process × Role × Skill Intelligence Engine</p>
+        </div>
+        <div class="header-badges">
+            <span class="badge badge-sky">Assignment 11: Graph Engine</span>
+            <span class="badge badge-lavender">Assignment 4: Role Analytics</span>
+            <span class="badge badge-mint">Gemini 3.1 Flash-Lite</span>
+            <span class="badge badge-rose">API Key Secured</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Top Stat Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-title">Enterprise Processes</div>
+                <div class="stat-value" id="stat-processes" style="color: var(--pastel-sky);">7</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Sub-Activities</div>
+                <div class="stat-value" id="stat-activities" style="color: var(--pastel-amber);">9</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Organizational Roles</div>
+                <div class="stat-value" id="stat-roles" style="color: var(--pastel-lavender);">5</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-title">Workforce Skills</div>
+                <div class="stat-value" id="stat-skills" style="color: var(--pastel-mint);">9</div>
+            </div>
+        </div>
+
+        <!-- Quick How It Works Banner -->
+        <div class="card" style="margin-bottom: 1.5rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(125, 211, 252, 0.25); padding: 1.25rem; border-radius: 12px;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.2rem;">💡</span>
+                <h3 style="font-size: 1rem; color: var(--pastel-sky); font-family: 'Outfit', sans-serif;">How NexusGraph AI Works (At a Glance)</h3>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; font-size: 0.85rem; color: var(--text-secondary);">
+                <div style="background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: 8px; border-left: 3px solid var(--pastel-sky);">
+                    <strong style="color: var(--pastel-sky); display: block; margin-bottom: 0.25rem;">1. Visual Graph Mapping</strong>
+                    Links <strong>Processes ➔ Activities ➔ Roles ➔ Skills</strong> into an interactive network map. Click any node to inspect details.
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: 8px; border-left: 3px solid var(--pastel-amber);">
+                    <strong style="color: var(--pastel-amber); display: block; margin-bottom: 0.25rem;">2. AI Impact Simulation</strong>
+                    Select any activity in the <em>Cascading Simulator</em> to see real-time ripple effect highlights on vulnerable job roles.
+                </div>
+                <div style="background: rgba(255,255,255,0.02); padding: 0.75rem 1rem; border-radius: 8px; border-left: 3px solid var(--pastel-mint);">
+                    <strong style="color: var(--pastel-mint); display: block; margin-bottom: 0.25rem;">3. Live Gemini Ingestion</strong>
+                    Type any unseen business scenario in the <em>Surprise Record</em> tab—Gemini 3.1 Flash-Lite automatically parses & adds it to the graph.
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="tab-graph">
+                🌐 Intelligence Graph (Assignment 11)
+            </button>
+            <button class="tab-btn" data-tab="tab-role">
+                👤 Role AI Impact Analyzer (Assignment 4)
+            </button>
+            <button class="tab-btn" data-tab="tab-simulator">
+                ⚡ Cascading Impact Simulator
+            </button>
+            <button class="tab-btn" data-tab="tab-surprise">
+                🧪 Live Surprise Record Test
+            </button>
+        </nav>
+
+        <!-- Tab 1: Intelligence Graph Canvas -->
+        <section id="tab-graph" class="tab-content active">
+            <div class="graph-wrapper">
+                <div class="graph-canvas-container">
+                    <div class="graph-controls">
+                        <button class="control-btn" id="btn-reset-layout">Reset Layout</button>
+                        <button class="control-btn" id="btn-layout-circle">Circle View</button>
+                        <button class="control-btn" id="btn-layout-concentric">Concentric View</button>
+                    </div>
+
+                    <div id="cy"></div>
+
+                    <div class="graph-legend">
+                        <div class="legend-item"><span class="legend-dot" style="background: #7dd3fc;"></span> Process</div>
+                        <div class="legend-item"><span class="legend-dot" style="background: #fcd34d;"></span> Activity</div>
+                        <div class="legend-item"><span class="legend-dot" style="background: #c084fc;"></span> Role</div>
+                        <div class="legend-item"><span class="legend-dot" style="background: #6ee7b7;"></span> Skill</div>
+                    </div>
+                </div>
+
+                <!-- Inspector Drawer -->
+                <aside class="inspector-panel" id="inspector-panel">
+                    <div class="panel-title">Node Inspector</div>
+                    <div id="inspector-content">
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Select any node on the graph canvas to inspect its relationships, AI exposure, and enterprise details.</p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Tab 2: Assignment 4 Role AI Impact Analyzer -->
+        <section id="tab-role" class="tab-content">
+            <div class="role-analyzer-grid">
+                <div class="card">
+                    <h3 style="margin-bottom: 1.25rem; color: var(--pastel-lavender);">Role Intelligence Query</h3>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Enterprise Role Catalog</label>
+                        <select id="role-selector" class="select-input">
+                            <option value="">Loading roles...</option>
+                        </select>
+                    </div>
+
+                    <button id="btn-analyze-role" class="action-btn">Analyze Role Impact</button>
+
+                    <div style="border-top:1px solid var(--border-color); margin-top:1.5rem; padding-top:1.25rem;">
+                        <h4 style="font-size:0.9rem; color:var(--pastel-sky); margin-bottom:0.75rem;">Assignment 11 Skill Lookup</h4>
+                        <label class="form-label">Select Skill to See Associated Roles</label>
+                        <select id="skill-selector" class="select-input">
+                            <option value="">Loading skills...</option>
+                        </select>
+                        <button id="btn-analyze-skill" class="action-btn" style="background:rgba(186, 230, 253, 0.15); color:var(--pastel-sky); border-color:rgba(186, 230, 253, 0.3);">Look Up Roles for Skill</button>
+                    </div>
+                </div>
+
+                <div class="card" id="role-analysis-results">
+                    <h3 class="panel-title" style="color: var(--pastel-lavender);">Role Intelligence Overview</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Choose a role on the left to run Assignment 4 deep process-to-role analytics (Processes → Activities → AI Impact → Future Responsibilities → Role Change).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: Cascading Impact Simulator -->
+        <section id="tab-simulator" class="tab-content">
+            <div class="role-analyzer-grid">
+                <div class="card">
+                    <h3 style="margin-bottom: 1.25rem; color: var(--pastel-amber);">Simulator Setup</h3>
+                    <div class="form-group">
+                        <label class="form-label">Select Target Activity to Automate</label>
+                        <select id="activity-simulator-selector" class="select-input">
+                            <option value="A1">A1: Historical Sales Trend Analysis</option>
+                            <option value="A4">A4: Contract Clause Risk Auditing</option>
+                            <option value="A6">A6: Automated Visual Defect Inspection</option>
+                            <option value="A7">A7: Dynamic Route Re-calculation</option>
+                        </select>
+                    </div>
+                    <button id="btn-run-simulation" class="action-btn" style="background: rgba(253, 230, 138, 0.2); color: var(--pastel-amber); border-color: rgba(253, 230, 138, 0.4);">
+                        Run Cascading Impact Simulation
+                    </button>
+                </div>
+
+                <div class="card" id="simulation-results">
+                    <h3 class="panel-title" style="color: var(--pastel-amber);">Cascading Ripple Effect Results</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Run a simulation to observe how AI automation on an activity cascades through connected processes, roles, and skill reskilling needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 4: Live Surprise Record Test (Evaluator Test) -->
+        <section id="tab-surprise" class="tab-content">
+            <div class="role-analyzer-grid">
+                <div class="card">
+                    <h3 style="margin-bottom: 1rem; color: var(--pastel-sky);">Surprise Record Ingestion</h3>
+                    <p style="font-size: 0.825rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+                        Evaluators can enter an unseen enterprise Process, Role, or Skill live. The Gemini AI agent will decompose it and inject it into the graph.
+                    </p>
+
+                    <div class="form-group">
+                        <label class="form-label">Record Type</label>
+                        <select id="surprise-type" class="select-input">
+                            <option value="Process">Process</option>
+                            <option value="Role">Role</option>
+                            <option value="Skill">Skill</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Name / Title</label>
+                        <input type="text" id="surprise-name" class="text-input" placeholder="e.g. Autonomous Yard Crane Dispatch">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Optional Domain Context</label>
+                        <textarea id="surprise-context" class="textarea-input" rows="3" placeholder="Context details..."></textarea>
+                    </div>
+
+                    <button id="btn-ingest-surprise" class="action-btn">Ingest & Update Graph</button>
+                </div>
+
+                <div class="card" id="surprise-results">
+                    <h3 class="panel-title" style="color: var(--pastel-sky);">Live Ingestion Audit Log</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Submit a surprise record on the left to observe live AI decomposition and SQLite graph persistence.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Application Scripts -->
+    <script src="/static/js/graph_viz.js"></script>
+    <script src="/static/js/role_analyzer.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
