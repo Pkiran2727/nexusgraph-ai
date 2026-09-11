@@ -3,7 +3,9 @@ title: NexusGraph AI
 emoji: 🌐
 colorFrom: blue
 colorTo: indigo
-sdk: docker
+sdk: gradio
+sdk_version: 4.44.0
+app_file: app.py
 app_port: 7860
 short_description: Enterprise Process x Role x Skill Intelligence Engine
 ---
